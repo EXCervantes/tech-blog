@@ -11,12 +11,12 @@ Comment.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    comment_body: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    description: {
-      type: DataTypes.STRING,
+      validate: {
+        len: [1],
+      },
     },
     date_created: {
       type: DataTypes.DATE,
@@ -32,6 +32,7 @@ Comment.init(
     },
     post_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: 'post',
         key: 'id',

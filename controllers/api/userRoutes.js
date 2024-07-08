@@ -1,18 +1,15 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-router.post('/', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
-    const userData = await User.create(req.body);
-
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
-
-      res.status(200).json(userData);
+    const dbUserData = await User.findAll({
+      attributes: { exclude: ['password'] },
     });
+    res.json(dbUserData);
   } catch (err) {
-    res.status(400).json(err);
+    console.log(err);
+    res.status(500).json(err);
   }
 });
 
@@ -39,8 +36,10 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      
-      res.json({ user: userData, message: 'You are now logged in!' });
+
+      res
+        .status(200)
+        .json({ user: userData, message: 'You are now logged in!' });
     });
 
   } catch (err) {
@@ -55,6 +54,27 @@ router.post('/logout', (req, res) => {
     });
   } else {
     res.status(404).end();
+  }
+});
+
+router.post('/signup', async (req, res) => {
+  try {
+    const newUser = new User()
+    newUser.username = req.username;
+    newUser.email = req.body.email;
+    newUser.password = req.body.password;
+
+    const userData = await newUser.save();
+
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+
+      res.status(200).json(userData);
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(400).json(err);
   }
 });
 
