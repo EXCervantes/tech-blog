@@ -1,24 +1,21 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Monoton&family=Racing+Sans+One&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: "Fira Code", monospace;
 }
 
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
+h1 {
+  font-size: 3rem;
+  font-weight: 750;
+  padding-left: 30px;
 }
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
-}
-
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+#login h2 {
+  font-size: 3rem;
+  font-weight: 750;
 }

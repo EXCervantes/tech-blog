@@ -1,0 +1,15 @@
+<div class="flex flex-col justify-center items-center">
+      <p class="text-xl">Dashboard</p>
+      <a href="/newpost" class="btn btn-primary">Create a New Blog Post</a>
+  <br>
+  <p class="text-lg">Tech Blog Posts:</p>
+  {{#each posts}}
+    <div class="post-container post mb-3">
+      <h2><a href="/post/{{id}}" class="text-decoration-none text-reset">{{title}}</a></h2>
+      <p>Created by: {{user.username}} on {{format_date date_created}}</p>
+      <a href="/editpost/{{id}}" class="btn btn-warning">Edit Post</a>
+      <button class="btn btn-danger delete-post" data-post-id="{{id}}">Delete</button>
+    </div>
+  {{/each}}   
+  </div>
+  

@@ -1,0 +1,26 @@
+<div class="flex flex-col justify-center items-center">
+  <h1 class="text-xl">Edit Post</h1>
+  <form class="update-post-form" class="mb-3">
+    <div class="mb-3">
+      <label for="title-update-post" class="form-label">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title-update-post"
+        placeholder="Enter post title"
+        value="{{post_title}}"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="content-update-post" class="form-label">Content</label>
+      <textarea
+        class="form-control"
+        id="content-update-post"
+        style="height: 250px; width: 350px;"
+        placeholder="Enter post content"
+      >{{post_body}}</textarea>
+    </div>
+    <button type="submit" id="update-post" class="btn btn-primary">Update Post</button>
+    <button type="button" id="delete-post" class="btn btn-danger">Delete Post</button>
+  </form>
+</div>
