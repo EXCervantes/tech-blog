@@ -2,28 +2,28 @@ const { Post } = require("../models");
 
 const postData = [
     {
-        title: "Say my name",
-        content: "Technology is fascinating but chemistry is the true beauty of science.",
+        post_title: "Say my name",
+        post_body: "Technology is fascinating but chemistry is the true beauty of science.",
         user_id: 1,
     },
     {
-        title: "Yo what up",
-        content: "So like this is my post yo",
+        post_title: "Yo what up",
+        post_body: "So like this is my post yo",
         user_id: 2,
     },
     {
-        title: "All I can do is wait",
-        content: "I don't know how this works or what's going on.",
+        post_title: "All I can do is wait",
+        post_body: "I don't know how this works or what's going on.",
         user_id: 3,
     },
     {
-        title: "I Hide In Plain Sight",
-        content: "The way to success is to know your technology and product well.",
+        post_title: "I Hide In Plain Sight",
+        post_body: "The way to success is to know your technology and product well.",
         user_id: 4,
     },
     {
-        title: "No More Half Measures",
-        content: "Not much to say.",
+        post_title: "No More Half Measures",
+        post_body: "Not much to say.",
         user_id: 5,
     }
 ];

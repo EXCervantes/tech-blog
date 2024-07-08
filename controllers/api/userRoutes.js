@@ -3,10 +3,28 @@ const { User } = require('../../models');
 
 router.get('/', async (req, res) => {
   try {
-    const dbUserData = await User.findAll({
+    const userData = await User.findAll({
       attributes: { exclude: ['password'] },
     });
-    res.json(dbUserData);
+    res.json(userData);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get('/:id', async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.params.id, {
+      attributes: { exclude: ['password'] },
+    });
+
+    if (!userData) {
+      res.status(400).json({ message: 'No user found with this id!' });
+      return;
+    }
+
+    res.status(200).json(userData);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
