@@ -3,19 +3,20 @@ const newCommentFormHandler = async (event) => {
 
     const post_id = parseInt(window.location.pathname.split('/').pop());
 
-    const newComment = document.querySelector('#new-comment').value.trim();
+    const contentComment = document.querySelector('#new-comment').value.trim();
 
-    if (newComment) {
+    if (contentComment) {
         const response = await fetch(`/api/comments`, {
             method: 'POST',
-            body: JSON.stringify({ comment_text: newComment, post_id }),
+            body: JSON.stringify({ comment_body: contentComment, post_id }),
             headers: { 'Content-Type': 'application/json' },
         });
+        console.log(response)
 
         if (response.ok) {
             document.location.reload();
         } else {
-            alert(response.statusText);
+            alert('Could not create a comment to post.');
         }
     }
 };

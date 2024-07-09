@@ -9,7 +9,6 @@
   - [Installation](#installation)
   - [Usage](#usage)
     - [Screenshots of the Application](#screenshots-of-the-application)
-  - [Credits](#credits)
   - [License](#license)
 
 ## Description
@@ -50,7 +49,7 @@ DB_PASSWORD='user's password created during PostgreSQL install'
 
 ## Usage
 
-Once a user has clicked the above link of the application and opened up the page in front of them head down to the last paragraph of this section for instructions on how to navigate the site.
+Once a user has clicked the above link of the application and opened up the page in front of them head down to the last two paragraphs of this section for instructions on how to navigate the site.
 
 The following is for users who wish to run this application locally. Once Node, PostgreSQL, and the necessary dependencies have been installed as well as the `.env` file created a user can then run PostgreSQL to create a database in the terminal with the following commands.
 
@@ -90,7 +89,11 @@ npm run seed
 
 To run the application open the Terminal or GitBash in VSCode and run `node server.js` or `npm start`. Now the server is active and a user can go to [localhost:3001](http://localhost:3001/) to open the page.
 
-Visit the homepage to "Login" or "Sign 
+Visit the homepage to "Login" or "Sign Up" if needed. If a user already has an account or they signed up then they can freely browse the current submitted posts. A user can add their own post or comment on another post.
+
+To add a new post click on "Create New Blog Post" and add a title for the post and the text body. Then click "Create Post" to submit it. To see the submitted posts click on "Home" in the navbar.
+
+A user can add a comment to existing posts by clicking "Add a comment". Previous comments can be seen here as well. Users can edit or delete their blog posts by clicking the respective button on their post. Finally, clicking the "Logout" button will log the user out. Also note the website will automatically log out after a set period of time.
 
 ### Screenshots of the Application
 
@@ -99,7 +102,7 @@ Visit the homepage to "Login" or "Sign
 ![post](assets/images/techblogscreen3.jpg)
 ![comment](assets/images/techblogscreen4.jpg)
 
-## Credits
+TODO ## Credits 
 
 Referenced for examples of include with attributes in Sequelize.
 
