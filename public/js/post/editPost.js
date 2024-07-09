@@ -7,7 +7,7 @@ const updatePostFormHandler = async (event) => {
 
     const title = document.querySelector("#title-update-post").value.trim();
     const body = document
-        .querySelector("#body-update-post")
+        .querySelector("#content-update-post")
         .value.trim();
 
     if (title && body) {
@@ -40,10 +40,10 @@ const deletePostFormHandler = async (event) => {
 };
 
 document
-    .querySelector('.update-post')
-    .addEventListener('click', updatePostFormHandler);
+    .querySelector('.update-post-form')
+    .addEventListener('submit', updatePostFormHandler);
 
 document
-    .querySelector('.delete-post')
+    .querySelector('#delete-post')
     .addEventListener('click', deletePostFormHandler);
 

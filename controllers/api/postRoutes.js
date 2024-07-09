@@ -64,7 +64,10 @@ router.post('/', withAuth, async (req, res) => {
 
 router.put('/:id', withAuth, async (req, res) => {
   try {
-    const updatedPost = await Post.update(req.body, {
+    const updatedPost = await Post.update({
+      post_title: req.body.title,
+      post_body: req.body.body
+    }, {
       where: { id: req.params.id },
     });
 
@@ -74,6 +77,7 @@ router.put('/:id', withAuth, async (req, res) => {
     }
     res.status(200).json(updatedPost);
   } catch (err) {
+    console.error(err)
     res.status(500).json(err);
   }
 });
@@ -97,8 +101,9 @@ router.delete('/:id', withAuth, async (req, res) => {
       return;
     }
 
-    res.status(200).json(postData);
+    res.status(200).json({ deletedPost });
   } catch (err) {
+    console.error(err)
     res.status(500).json(err);
   }
 });
