@@ -1,15 +1,26 @@
 <div class="flex flex-col justify-center items-center">
-      <p class="text-4xl">Dashboard</p>
-      <a href="/newpost" class="btn btn-primary">Create a New Blog Post</a>
+  <p class="text-4xl">My Dashboard</p>
+  <div class="mb-6">
+    <a href="/newpost" class="btn btn-primary ">Create a New Blog Post</a>
+  </div>
   <br>
-  <p class="text-3xl">Tech Blog Posts:</p>
+  <p class="my-px-3 text-3xl">My Tech Blog Posts</p>
   {{#each posts}}
-    <div class="post-container post mb-3">
-      <h2><a href="/post/{{id}}" class="text-decoration-none text-reset">{{title}}</a></h2>
-      <p>Created by: {{user.username}} on {{format_date date_created}}</p>
+  <div class="card mb-5">
+    <div class="card-header bg-blue-100">
+      <div class="container mx-auto text-center post mb-3">
+        <h2><a href="/post/{{id}}" class="text-gray-200 text-decoration-none text-reset">{{post_title}}</a>
+        </h2>
+      </div>
+      <div class="text-m text-gray-200 py-3 px-1">
+        <p>{{post_body}}</p>
+      </div>
+      <p>Created on: {{format_date date_created}}</p>
+    </div>
+    <div class="p-2 content-center">
       <a href="/editpost/{{id}}" class="btn btn-warning">Edit Post</a>
       <button class="btn btn-danger delete-post" data-post-id="{{id}}">Delete</button>
     </div>
-  {{/each}}   
   </div>
-  
+  {{/each}}
+</div>

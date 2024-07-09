@@ -11,12 +11,9 @@ const newCommentFormHandler = async (event) => {
             body: JSON.stringify({ comment_body: contentComment, post_id }),
             headers: { 'Content-Type': 'application/json' },
         });
-        console.log(body)
-        console.log(headers)
-        console.log(contentComment)
 
         if (response.ok) {
-            document.location.reload();
+            setTimeout(() => document.location.reload(), 150);
         } else {
             alert('Could not create a comment to post.');
         }
