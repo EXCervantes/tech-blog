@@ -9,6 +9,7 @@
   - [Installation](#installation)
   - [Usage](#usage)
     - [Screenshots of the Application](#screenshots-of-the-application)
+  - [Credits](#credits)
   - [License](#license)
 
 ## Description
@@ -100,13 +101,12 @@ A user can add a comment to existing posts by clicking "Add a comment". Previous
 ![homepage](assets/images/techblogscreen1.jpg)
 ![login](assets/images/techblogscreen2.jpg)
 ![post](assets/images/techblogscreen3.jpg)
-![comment](assets/images/techblogscreen4.jpg)
 
-TODO ## Credits 
+## Credits
 
-Referenced for examples of include with attributes in Sequelize.
+Referenced for using Tailwind CSS with Handlebars.
 
-"_node.js - How to use an include with attributes with sequelize? - Stack Overflow_". (2018, April 25). Stack Overflow. Retrieved June 26, 2024, from https://stackoverflow.com/questions/21883484/how-to-use-an-include-with-attributes-with-sequelize
+"_node.js - How to use tailwindCSS in .hbs file - Stack Overflow_". (2023, November 14). Stack Overflow. Retrieved July 6, 2024, from https://stackoverflow.com/questions/75639878/how-to-use-tailwindcss-in-hbs-file
   
 ## License
 
