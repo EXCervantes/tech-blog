@@ -81,7 +81,7 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('pageauth/login');
 });
 
 router.get('/signup', (req, res) => {
@@ -90,12 +90,14 @@ router.get('/signup', (req, res) => {
     return;
   }
 
-  res.render('signup')
+  res.render('pageauth/signup')
 });
 
 router.get('/newpost', (req, res) => {
   if (req.session.logged_in) {
-    res.render('newpost')
+    res.render('posts/newpost', {
+      logged_in: req.session.logged_in
+    });
     return;
   }
 
