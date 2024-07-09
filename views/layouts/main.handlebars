@@ -5,13 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Tech Blog</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 
 </head>
-
 <body>
   <div class="bg-gray-100">
   <div class="flex-column justify-space-around">
@@ -28,7 +26,7 @@
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
         </svg>
     </button>
-    <div class="bg-blue-200 w-full md:block md:w-auto" id="navbar-default">
+    <div class="bg-blue-200 w-full text-lg md:block md:w-auto" id="navbar-default">
       <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-blue-200 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
         <li>
           <a href="/" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
@@ -59,13 +57,14 @@
 <footer
                 class="bg-blue-200 border-black border-solid border-2 rounded-lg shadow dark:bg-gray-900 mx-8 my-10">
                 <div class="w-full max-w-screen-xl mx-auto py-2 md:py-4">
-                    <span class="block text-large text-black sm:text-center dark:text-gray-400">© 2023 Edwardo Cervantes </span>
+                    <span class="block text-large text-black sm:text-center dark:text-gray-400">The Tech Blog © 2023 Edwardo Cervantes </span>
                 </div>
             </footer>
   </div>
+  </div>
 
   {{#if logged_in}}
-  <script src="/js/post/newPost.js"></script>
+  <scriptid= src="/js/post/newPost.js"></>
   <script src="/js/post/newComment.js"></script>
   <script src="/js/post/editPost.js"></script>
   <script src="/js/post/deletePost.js"></script>
@@ -74,7 +73,6 @@
   <script src="/js/pageauth/login.js"></script>
   <script src="/js/pageauth/signup.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-  </div>
 </body>
 
 </html>

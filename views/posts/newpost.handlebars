@@ -1,24 +1,27 @@
 <div class="flex flex-col justify-center items-center">
-  <h2 class="text-xl">Create a Blog Post</h2>
-  <form class="new-post-form">
-    <div class="mb-3">
+  <p class="text-4xl">Create a Blog Post</p>
+  <div class="container mx-auto">
+
+  <form class="container mx-auto new-post-form">
+    <div class="ml-6 mb-3">
       <label for="title-new-post" class="form-label">Title:</label>
       <input
         type="text"
         class="form-control"
         id="title-new-post"
-        placeholder="Enter a title of your choice"
+        placeholder="Enter a title"
       />
     </div>
-    <div class="mb-3">
-      <label for="content-new-post" class="form-label">Content:</label>
+    <div class="mb-5">
+      <label for="content-new-post" class="text-2xl form-label">Content:</label>
       <textarea
         class="form-control"
         id="content-new-post"
         style="height: 250px; width: 350px;"
-        placeholder="Enter text here"
+        placeholder="Enter post text here"
       ></textarea>
     </div>
+  </div>
     <div class="mb-3">
       <button type="submit" class="btn btn-primary">Create Post</button>
     </div>
