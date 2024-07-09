@@ -9,6 +9,7 @@
   - [Installation](#installation)
   - [Usage](#usage)
     - [Screenshots of the Application](#screenshots-of-the-application)
+    - [Link to Deployed Application](#link-to-deployed-application)
   - [Credits](#credits)
   - [License](#license)
 
@@ -101,6 +102,10 @@ A user can add a comment to existing posts by clicking "Add a comment". Previous
 ![homepage](assets/images/techblogscreen1.jpg)
 ![login](assets/images/techblogscreen2.jpg)
 ![post](assets/images/techblogscreen3.jpg)
+
+### Link to Deployed Application
+
+[Application Webpage Link](https://tech-blog-6dqv.onrender.com/)
 
 ## Credits
 
