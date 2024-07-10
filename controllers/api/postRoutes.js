@@ -1,7 +1,9 @@
+// Import necessary models, dependencies, and auth helper
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// GET all posts
 router.get('/', async (req, res) => {
   try {
     const postData = await Post.findAll({
@@ -18,6 +20,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET post by ID
 router.get('/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
@@ -48,6 +51,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// Add a new post
 router.post('/', withAuth, async (req, res) => {
   try {
     const newPost = await Post.create({
@@ -63,6 +67,7 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+// Update a previous post
 router.put('/:id', withAuth, async (req, res) => {
   try {
     const updatedPost = await Post.update({
@@ -83,6 +88,7 @@ router.put('/:id', withAuth, async (req, res) => {
   }
 });
 
+// DELETE a post
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     await Comment.destroy({

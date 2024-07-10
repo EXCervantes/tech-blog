@@ -1,3 +1,4 @@
+// Set up dotenv with Sequelize environment variables
 const Sequelize = require('sequelize');
 require('dotenv').config();
 

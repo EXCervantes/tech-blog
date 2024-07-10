@@ -44,7 +44,7 @@ You must have `node` installed on your system. Go [here](https://nodejs.org/en/l
 This application utilizes a package that requires a file named `.env` to be created on the user's native system in the root directory of the cloned repo. The following lines must exist in this file:
 
 ```md
-DB_NAME='ecommerce_db'
+DB_NAME='techblog_db'
 DB_USER='postgres'
 DB_PASSWORD='user's password created during PostgreSQL install'
 ```

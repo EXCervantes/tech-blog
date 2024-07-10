@@ -1,7 +1,9 @@
+// Import necessary models, dependencies, and auth helper
 const router = require('express').Router();
 const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// GET all comments
 router.get('/', async (req, res) => {
   try {
     const commentData = await Comment.findAll({
@@ -14,6 +16,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET comment by ID
 router.get('/:id', async (req, res) => {
   try {
     const commentData = await Comment.findByPk(req.params.id, {
@@ -32,6 +35,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// Add comment to a post
 router.post('/', withAuth, async (req, res) => {
   try {
     console.log(req.body.contentComment)
@@ -49,6 +53,7 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+// DELETE comment by ID
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const deleteComment = await Comment.destroy({

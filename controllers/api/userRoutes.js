@@ -1,6 +1,8 @@
+// Import necessary models and dependencies
 const router = require('express').Router();
 const { User } = require('../../models');
 
+// GET all Users
 router.get('/', async (req, res) => {
   try {
     const userData = await User.findAll({
@@ -13,6 +15,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET user by ID
 router.get('/:id', async (req, res) => {
   try {
     const userData = await User.findByPk(req.params.id, {
@@ -31,6 +34,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// Handle user logging in route
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -75,6 +79,7 @@ router.post('/logout', (req, res) => {
   }
 });
 
+// Handle user signing up route
 router.post('/signup', async (req, res) => {
   try {
     const newUser = new User()
