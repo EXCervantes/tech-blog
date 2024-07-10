@@ -1,24 +1,44 @@
-<div class="flex flex-col justify-center items-center">
-<div>
-    <p class="text-xl">{{post_title}}</p>
-    <p>Created by: {{user.username}} on {{format_date date_created}}</p>
-    <p>{{post_body}}</p>
-</div>
-{{#if logged_in}}
-    <form class="new-comment-form" class="mb-3">
-      <div class="mb-3">
-        <label for="comment" class="form-label">Add Comment:</label>
-        <textarea style="height: 250px; width: 350px;" id="new-comment" class="form-control"
-        placeholder="Add a comment"
-        ></textarea>
+<div class="container mx-auto">
+  <div class="flex flex-col justify-center items-center">
+    <div
+      class="block max-w-sm p-6 bg-blue-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{post_title}}</h3>
+      <p class="font-normal text-lg text-gray-700 dark:text-gray-400">{{post_body}}.</p>
+      <p class="text-sm">Created by: {{user.username}} on {{format_date date_created}}</p>
+      <article>
+    </div>
+    </article>
+    {{#if logged_in}}
+    <article class="py-6">
+      <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Comments</h3>
+      {{#each comments}}
+      <div
+        class="comment block max-w-sm p-6 bg-blue-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <section class="comments">
+          <ol>
+            <li>
+              <div class="comment">
+                <p class="font-normal text-lg text-gray-700 dark:text-gray-400">{{comment_body}}</p>
+                <p class="text-sm">By {{user.username}} on {{format_date date_created}}</p>
+              </div>
+            </li>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  {{/if}}
-  <h2>Comments:</h2>
-  {{#each comments}}
-    <div class="comment mb-3">
-      <p>{{comment_body}}</p>
-      <p>By {{user.username}} on {{format_date date_created}}</p>
-{{/each}}
+    </article>
+    {{/each}}
+    <div class="py-6">
+      <section
+        class="block max-w-sm p-3 bg-blue-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <form class="new-comment-form" class="mb-3">
+          <div class="py-3 mb-3">
+            <p>Add Comment</p>
+            <label for="comment" class="form-label"></label>
+            <textarea style="height: 250px; width: 350px;" id="new-comment" class="form-control"
+              placeholder="Add a comment"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        {{/if}}
+      </section>
+    </div>
+  </div>
 </div>
