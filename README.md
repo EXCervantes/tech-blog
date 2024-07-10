@@ -51,7 +51,7 @@ DB_PASSWORD='user's password created during PostgreSQL install'
 
 ## Usage
 
-Once a user has clicked the above link of the application and opened up the page in front of them head down to the last two paragraphs of this section for instructions on how to navigate the site.
+Once a user has clicked the [webpage link](https://tech-blog-6dqv.onrender.com/) of the application and opened up the page in front of them head down to the last three paragraphs of this section for instructions on how to navigate the site.
 
 The following is for users who wish to run this application locally. Once Node, PostgreSQL, and the necessary dependencies have been installed as well as the `.env` file created a user can then run PostgreSQL to create a database in the terminal with the following commands.
 
@@ -90,6 +90,8 @@ npm run seed
 ```
 
 To run the application open the Terminal or GitBash in VSCode and run `node server.js` or `npm start`. Now the server is active and a user can go to [localhost:3001](http://localhost:3001/) to open the page.
+
+---
 
 Visit the homepage to "Login" or "Sign Up" if needed. If a user already has an account or they signed up then they can freely browse the current submitted posts. A user can add their own post or comment on another post.
 
