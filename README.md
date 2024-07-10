@@ -99,9 +99,10 @@ A user can add a comment to existing posts by clicking "Add a comment". Previous
 
 ### Screenshots of the Application
 
-![homepage](assets/images/techblogscreen1.jpg)
-![login](assets/images/techblogscreen2.jpg)
-![post](assets/images/techblogscreen3.jpg)
+![homepage](public/images/techblogscreen1.jpg)
+![login](public/images/techblogscreen2.jpg)
+![post](public/images/techblogscreen3.jpg)
+![comment](public/images/techblogscreen4.jpg)
 
 ### Link to Deployed Application
 
