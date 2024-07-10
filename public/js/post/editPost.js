@@ -1,3 +1,4 @@
+// Handle the edit post button by deleting old post and use PUT to replace with the new one
 const post_id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
 ];

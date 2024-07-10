@@ -1,3 +1,4 @@
+// Handle the delete post button
 const deletePost = async (post_id) => {
     const response = await fetch(`/api/posts/${post_id}`, {
         method: "DELETE",

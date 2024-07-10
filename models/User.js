@@ -1,3 +1,4 @@
+// Required dependencies and modules and define User Model
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');

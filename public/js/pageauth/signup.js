@@ -1,3 +1,4 @@
+// Handle signing up to the application
 const signupFormHandler = async (event) => {
     event.preventDefault();
 

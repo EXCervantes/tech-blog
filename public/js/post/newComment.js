@@ -1,3 +1,4 @@
+// Handle adding a new comment
 const newCommentFormHandler = async (event) => {
     event.preventDefault();
 

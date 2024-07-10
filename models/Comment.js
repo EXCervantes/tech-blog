@@ -1,3 +1,4 @@
+// Required dependencies and modules and define comment Model
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 

@@ -1,3 +1,4 @@
+/* Import our framework, fonts, and minor styling changes */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

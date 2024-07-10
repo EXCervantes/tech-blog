@@ -1,3 +1,4 @@
+{{!-- Main layout page --}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +13,7 @@
 </head>
 
 <body>
+  {{!-- Navbar Header --}}
   <div class="bg-gray-100">
     <div class="flex-column justify-space-around">
       <header class="bg-blue-200 display-flex justify-space-between align-center p-2">
@@ -63,9 +65,11 @@
           </div>
         </nav>
       </header>
+      {{!-- Body of page to be displayed with handlebars --}}
       <main class="container container-fluid mt-5">
         {{{ body }}}
       </main>
+      {{!-- Footer with copyright info --}}
       <footer class="bg-blue-200 border-black border-solid border-2 rounded-lg shadow dark:bg-gray-900 mx-8 my-10">
         <div class="w-full max-w-screen-xl mx-auto py-2 md:py-4">
           <span class="block text-large text-black sm:text-center dark:text-gray-400">The Tech Blog © 2023 Edwardo
@@ -74,7 +78,7 @@
       </footer>
     </div>
   </div>
-
+  {{!-- Scripts for all the pages and framework --}}
   {{#if logged_in}}
   <script src="/js/post/newPost.js"></script>
   <script src="/js/post/newComment.js"></script>

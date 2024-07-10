@@ -1,4 +1,4 @@
-// Import necessary modules
+// Import necessary modules and setup up database relations
 const User = require('./User');
 const Post = require('./Post');
 const Comment = require('./Comment');

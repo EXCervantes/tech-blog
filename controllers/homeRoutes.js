@@ -1,8 +1,9 @@
-// // Import required packages and models
+// Import required packages and models
 const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+// GET posts to be rendered on homepage
 router.get('/', async (req, res) => {
   try {
     const postData = await Post.findAll({
@@ -26,6 +27,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET posts to be rendered individually
 router.get('/post/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
@@ -112,6 +114,7 @@ router.get('/newpost', (req, res) => {
   res.redirect('/login')
 });
 
+// Define post to be edited via ID
 router.get("/editpost/:id", async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
